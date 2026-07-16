@@ -2,26 +2,26 @@
 
 HYSP GeoViewer (HyGV) is an interactive visualization tool for atmospheric science applications.
 
-It provides a unified environment for exploring model outputs, satellite products, and observational datasets with a simple graphical interface.
+It provides a unified environment for exploring atmospheric model outputs, satellite products, and observational datasets through an intuitive graphical interface.
 
 ---
 
 ## Beta Version
 
-This repository contains a **beta release** of HYSP GeoViewer.
+This repository hosts the **private beta** releases of HYSP GeoViewer.
 
-The software is under active development. Features, file formats, and user interfaces may change without notice.
+The software is under active development. Features, file formats, and user interfaces may change between releases.
 
 ---
 
 ## Main Features
 
-- Interactive map display
+- Interactive map visualization
 - Multiple IMAGE and OBS layers
 - Raster and contour visualization
 - Time navigation
 - Bounding-box (BBOX) analysis
-- Time series generation
+- Time-series generation
 - Scatter plots
 - Project management
 - Case management
@@ -39,39 +39,25 @@ Supported data include
 
 ---
 
-## Downloads
+# Downloads
 
-The latest beta release contains:
+Download the latest beta release from the **Releases** page.
+
+Each release contains:
 
 | File | Description |
 |------|-------------|
-| **HyGV-YYMMDD-NNN-Windows.zip** | Stand-alone Windows executable |
-| **HyGV-YYMMDD-NNN-Python.zip** | Python version |
-| **HyGV-YYMMDD-NNN-Data.zip** | Sample datasets |
+| **HyGV-*-Windows.zip** | Stand-alone Windows executable (recommended for most users) |
+| **HyGV-*-Python.zip** | Compiled Python (.pyc) version for users with Python installed |
+| **HyGV-*-Data.zip** | Sample datasets |
 
 ---
 
-## System Requirements
+# Installation
 
-### Windows
+## Option 1 (Recommended): Windows Executable
 
-- Windows 10 or newer
-
-Executable version:
-
-- No Python installation required.
-
-Python version:
-
-- Python 3.13 recommended
-
----
-
-## Installation
-
-### Windows Executable
-
-1. Download the latest Windows package.
+1. Download **HyGV-*-Windows.zip**.
 2. Extract the ZIP file.
 3. Run
 
@@ -79,66 +65,72 @@ Python version:
 HyGV.exe
 ```
 
+No Python installation is required.
+
 ---
 
-### Python Version
+## Option 2: Compiled Python Version (.pyc)
 
-Create a virtual environment
+The Python package contains **compiled Python bytecode (.pyc)** rather than Python source code.
 
-```bash
-python -m venv .venv
-```
+### Requirements
 
-Activate
+- Python 3.13
+- Packages listed in `requirements.txt`
+
+### Create a virtual environment
 
 Windows
 
 ```powershell
+py -3.13 -m venv .venv
 .venv\Scripts\activate
 ```
 
-macOS/Linux
+macOS / Linux
 
 ```bash
+python3.13 -m venv .venv
 source .venv/bin/activate
 ```
 
-Install packages
+### Install required packages
 
 ```bash
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Run
+### Run HyGV
 
-```bash
-python hysp_geoviewer.py
-```
+Use the launcher included in the Python package.
+
+Refer to the documentation included with the package for the appropriate startup command.
 
 ---
 
-## Reporting Issues
+# Reporting Issues
 
-Please use GitHub Issues.
+Please report problems through **GitHub Issues**.
 
-Include
+When reporting a bug, include
 
 - HyGV version
 - Operating system
 - Python version (if applicable)
 - Steps to reproduce
-- Error message
+- Complete error message
 - Screenshot (if available)
 
 ---
 
-## Citation
+# Citation
 
-If HyGV contributes to published research, please cite the appropriate publication once available.
+If HYSP GeoViewer contributes to published research, please cite the appropriate publication once available.
 
 ---
 
-## Author
+# Author
 
 Designed by
 
@@ -146,8 +138,8 @@ Designed by
 
 ---
 
-## Development
-
-Current status
+# Development Status
 
 **Private Beta**
+
+Feedback and bug reports are welcome.
